@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-2">
+        <div class="row">
+            <img class="left-img" src="https://i.pinimg.com/originals/50/bb/c5/50bbc56ae2a320d189bc44e7dd77e45a.jpg">
+        </div>
+        <div class="row">
+            <img class="left-img" src="https://ahkrimediasite.s3.us-east-2.amazonaws.com/wp-content/uploads/2021/06/10190934/1.jpeg">
+        </div>
+        <div class="row">
+            <img class="left-img" src="https://sulcdn.azureedge.net/biz-live/img/mosin-terracotta-and-silk-thread-jewellery-making-class-10251449-26e1fe67.jpeg">
+        </div>
+    </div>
+    <div class="col-8">
+        <ngb-carousel #carousel [interval]="2000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus"
+            (slide)="onSlide($event)">
+            <ng-template ngbSlide *ngFor="let img of images; index as i">
+                <div class="carousel-caption">
+                    <h3>Handmade with Love</h3>
+                </div>
+                <div class="picsum-img-wrapper">
+                    <img id='slider' [src]="img" alt="My image {{i + 1}} description">
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
+    <div class="col-2">
+        <div class="row">
+            <img class="right-img" src="https://i.pinimg.com/originals/8f/2a/be/8f2abe3624ad8ec23bcfd9cb5281b970.jpg">
+        </div>
+        <div class="row">
+            <img class="right-img" src="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs3/117851725/original/5061663f9a23f77bab48c0e89df3ed5df32d572b/make-creative-hand-made-cards-and-silk-thread-jewelry.png">
+        </div>
+        <div class="row">
+            <img class="right-img" src="https://i.pinimg.com/736x/17/2e/a3/172ea3627044ac4a94412515aa8c9294.jpg">
+        </div>
+    </div>
+</div>

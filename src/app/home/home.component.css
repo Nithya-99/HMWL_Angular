@@ -1,0 +1,22 @@
+#slider{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 595px;  
+}
+.col-8{
+    border-left: 15px double #fff;
+    border-right: 15px double #fff;
+    padding: 0;
+}
+.right-img{
+    width: 100%;
+    height: 198.3px;
+    opacity: 0.8;
+}
+.left-img{
+    width: 100%;
+    height: 198.3px;
+    opacity: 0.8;
+}

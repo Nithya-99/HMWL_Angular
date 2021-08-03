@@ -1,0 +1,27 @@
+
+<div class="container">
+    <h2 class="text-center" style="color: #fff;">Products</h2>
+    <div class="input-container">
+        <input type="text" #newsearch placeholder="Search For Item" class="form-control" [(ngModel)]='productName'
+            (input)='search()' style="border-radius: 0;" />
+        <i class="fas fa-search icon"></i>
+    </div>
+    <h1 id='noProduct' class="text-white text-center bg-warning"></h1>
+</div>
+<div class="products">
+    <div class="container-fluid" *ngFor='let product of getProducts();let i=index'>
+        <div class="card justify-content-center">
+            <h4 class="text-center">{{product.ProductName}}</h4>
+            <img class="card-img-top" src={{product.image}} alt="Card image cap" style="border:2px solid #0a3254;" />
+            <div class="card-body"
+                style="border-left:2px solid #0a3254;border-right:2px solid #0a3254;border-bottom:2px solid #0a3254;">
+                <h5 class="card-title">{{product.price | currency:"INR":"symbol"}}</h5>
+                <pd-star [rating]='product.rating' style="float: left; margin-right: 5px;"></pd-star>{{product.rating | starRating}}
+                <a routerLink="/details/{{product.id}}"><button type='button' style='width:100%;' class='btn btn-success'
+                        name='viewproduct' id='viewproduct'>View Product</button></a>
+    
+            </div>
+        </div>
+    </div>
+</div>
+

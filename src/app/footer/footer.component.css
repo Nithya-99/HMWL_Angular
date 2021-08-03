@@ -1,0 +1,62 @@
+/* .contact{
+    color: #FFD700;
+    text-decoration: none;
+}
+.page-footer{
+    background-color: black;
+}
+.contact:hover{
+    color:  white;
+    text-decoration: none;
+} */
+
+
+.footer{
+    background:#000 !important;
+    color: #fff !important;
+    padding: 5px;
+    width: 100%;
+}
+.footer.copyright
+{
+    margin-bottom: -80px !important;
+    font-size: 15px;
+    padding-bottom: 10px;
+    background:#000 !important;
+}
+.footer a{
+    color: #fff !important;
+}
+.footer h1{
+    font-size: 15px;
+    color: #747270;
+}
+.footer p{
+    font-size: 15px;
+    color: #fff !important;
+}
+.fab.fa-instagram{
+    margin-right: 2px;
+    font-size: 15px !important;
+}
+.fa-envelope{
+    margin-right: 2px;
+    font-size: 15px !important;
+}
+.far.fa-heart{
+    color: red;
+    font-size: 15px !important;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.footer.row.col-md-3{
+    margin-top: 5px;
+}
+.footer .row .fa{
+    padding-right: 20px;
+    font-size: 10px;
+}
+.footer hr{
+    margin-top: 5px;
+    background-color: #ccc;
+}

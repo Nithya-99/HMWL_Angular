@@ -1,0 +1,31 @@
+<div class="form" method="POST">
+    <form class="form1" id="form1" #form="ngForm">
+        <h3 class='text-center'>Feedback</h3>
+        <div class="container">
+            <input type="text" class="form-control" placeholder="Enter Email" name="email" id="email" [(ngModel)]='mail'
+                required #email='ngModel' pattern="[A-Za-z0-9._%-]+@[A-Za-z0-9._%-]+\\.[a-z]{2,3}" />
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger"
+                style="margin-bottom: 5px; margin-top: 0px;">
+                <div *ngIf="email.errors?.required">
+                    Email is required.
+                </div>
+                <div *ngIf="email.errors?.pattern">
+                    Invalid Email
+                </div>
+            </div>
+
+            <textarea placeholder="Enter Message" class="form-control" name="message" id="message" [(ngModel)]='message'
+                required #msg='ngModel'></textarea>
+            <div *ngIf="msg.invalid && (msg.dirty || msg.touched)" class="text-danger"
+                style="margin-bottom: 5px; margin-top: 0px;">
+                <div *ngIf="msg.errors?.required">
+                    Message is required.
+                </div>
+            </div>
+
+            <div class="clearfix">
+                <button class="btn" name="feedback" [disabled]="form.invalid" type="submit">Submit Feedback</button>
+            </div>
+        </div>
+    </form>
+</div>

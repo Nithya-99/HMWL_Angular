@@ -1,0 +1,38 @@
+<div>
+    <div class='container'>
+        <h1 class="text-center text-white">Product Details</h1>
+        <div class='row'>
+            <div class='col-4'>
+                <img class="card-img" src={{product.image}} alt="Card image cap" />
+            </div>
+            <div class='col-8'>
+                <div>
+                    <h5 class="card-title"><b>Product Name: </b> {{product.ProductName}}</h5>
+                    <h5><b>Product Code:</b> {{product.code | productCode}}</h5>
+                    <h5><b>Price:</b> {{product.price | currency:"INR":"symbol"}}</h5>
+                    <h5 style="float: left;margin-right: 5px;"><b>Rating:</b></h5>
+                    <pd-star [rating]='product.rating' style="margin-right: 5px;"></pd-star>{{product.rating |
+                    starRating}}
+                    <h5><b>Description:</b> {{product.ProductDescription}}</h5>
+                </div>
+                
+                <div class="row">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-outline-danger btn-md btn-block" (click)="delete(product)">
+                            <i class="fas fa-trash-alt"></i>
+                            Delete
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <a routerLink="/edit/{{product.id}}" style="text-decoration: none;">
+                            <button type="button" class="btn btn-outline-warning btn-md btn-block">
+                                <i class="fas fa-pencil-alt"></i>
+                                Edit
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
